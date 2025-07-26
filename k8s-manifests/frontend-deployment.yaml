@@ -18,3 +18,14 @@ spec:
         image: rafaelvzago/fortune-frontend:1.2
         ports:
         - containerPort: 80
+        
+    ignoreDifferences:
+    - group: apps
+    kind: Deployment
+    jsonPointers:
+    - /spec/replicas
+
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true      
