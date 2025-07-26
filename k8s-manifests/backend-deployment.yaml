@@ -21,3 +21,6 @@ spec:
         env:
         - name: API_URL
           value: "https://api.adviceslip.com/advice"
+        resources:
+          requests:
+            cpu: "100m" # Solicita 10% de um núcleo de CP      
